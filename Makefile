@@ -8,8 +8,6 @@ SUBLEVEL =
 EXTRAVERSION = -rc2
 NAME =
 
-ARCH=arm
-
 # *DOCUMENTATION*
 # To see a list of typical targets execute "make help"
 # More info can be located in ./README
@@ -247,6 +245,8 @@ export	HOSTARCH HOSTOS
 ifeq ($(HOSTARCH),$(ARCH))
 CROSS_COMPILE ?=
 endif
+
+ARCH=arm
 
 KCONFIG_CONFIG	?= .config
 export KCONFIG_CONFIG
